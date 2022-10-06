@@ -133,6 +133,11 @@ body{
     gap:50px;
 }
 
+.nav-item{
+    position: relative;
+}
+
+
 .nav-link, 
 .contacts-link{
     font-weight: 500;
@@ -148,6 +153,22 @@ body{
 .nav-link:hover,
 .nav-link:focus{
     color: var(--accent-color);
+}
+
+
+.nav-link.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 45px;
+
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+
+    background-color: var(--accent-color);
 }
 
 
@@ -278,8 +299,32 @@ body{
 
 
 .activity-item {
+    position: relative;
+
     width: calc((100%-60px)/3);
+    max-width: 370px;
 }
+
+.activity-title{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height:70px;
+    padding: 27px 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    color:var(--light-text-color);
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    
+    
+}
+
+
 
 /* !!!!!!!!!   OUR  TEAM     !!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
